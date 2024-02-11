@@ -5,7 +5,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 def create(request):
     if request.method == "GET":
-        return render(request, 'create.html')
+        lista = ['joao', 'pedro', 'lucas', 'daniel', 'pedrow']
+        return render(request, 'create.html', context={'lista':lista})
     elif request.method == "POST":
         username = request.POST.get('username')
         password = request.POST.get('password')

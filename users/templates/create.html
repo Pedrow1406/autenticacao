@@ -22,5 +22,20 @@
         <br><br>
         <input type="submit" value="Send">
     </form>
+    <br>
+    <br>
+    <hr>
+    {% for item in lista %}
+        
+        {% if item == lista|last%}
+            <h2>{{item|upper}}</h2>
+        {% else %}
+        {{item}}
+        {% endif %}
+
+        <br>
+    {% endfor %}
+    <h3>A lista tem {{lista|length}} itens</h3>
+    <hr>
 </body>
 </html>
